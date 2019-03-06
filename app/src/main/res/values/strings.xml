@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DndCombatGuide</string>
+    <string name="AboutUs"><![CDATA[Dungeons & Dragons is a fantastic game of endless creative opportunities. Most rules aren\'t that necessary to know other than those of combat. While combat rules may seem daunting and intimidating, this app has been made to simplify and teach the rules of combat. Tell the app about your character and it will help guide you through your available actions during a battle.]]></string>
+    <string name="TitleText"><![CDATA[D&D Combat Guide]]></string>
+    <string name="AboutUsTitle"><![CDATA[About D&D Combat Guide]]></string>
+    <string name="next">Next</string>
 </resources>
