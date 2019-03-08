@@ -57,7 +57,7 @@ public class MakeCharacterClass extends AppCompatActivity {
         toMakeStats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MakeCharacterClass.this, MakeCharacterClass.class); // Change to MakeCharacterStats when created
+                Intent intent = new Intent(MakeCharacterClass.this, MakeCharacterStats.class); // Change to MakeCharacterStats when created
 
                 if(rg.getCheckedRadioButtonId()!=-1){ // if a choice is made go to next activity
                     intent.putExtra("name", name);
