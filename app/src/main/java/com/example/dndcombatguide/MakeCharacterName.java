@@ -11,7 +11,9 @@ import android.widget.TextView;
 public class MakeCharacterName extends AppCompatActivity {
 
     TextView nameForm;
-    String name, playerClass = null;
+    String name, playerClass = null, level = "1";
+    String[] stats = {"10", "10", "10", "10", "10", "10"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,8 @@ public class MakeCharacterName extends AppCompatActivity {
                 if(name != null && !name.equals("")) {
                     intent.putExtra("name", name);
                     intent.putExtra("class", playerClass);
+                    intent.putExtra("level", level);
+                    intent.putExtra("stats", stats);
                     startActivity(intent);
                 }
             }
@@ -59,6 +63,8 @@ public class MakeCharacterName extends AppCompatActivity {
                 Log.i("Name Class","Name set to " + name);
             }
             playerClass = extras.getString("class");
+            level = extras.getString("level");
+            stats = extras.getStringArray("stats");
         }
     }
 }

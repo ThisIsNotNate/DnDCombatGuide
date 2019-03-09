@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MakeCharacterStats"></activity>
+        <activity android:name=".MakeCharacterEquipment"></activity>
+        <activity android:name=".MakeCharacterLevel" />
+        <activity android:name=".MakeCharacterStats" />
         <activity android:name=".MakeCharacterClass" />
         <activity android:name=".AboutUs" />
         <activity android:name=".MakeCharacterName" />

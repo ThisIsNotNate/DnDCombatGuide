@@ -8,7 +8,7 @@
     tools:context=".MakeCharacterClass">
 
     <Button
-        android:id="@+id/buttonToMakeStats"
+        android:id="@+id/buttonToMakeLevel"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"

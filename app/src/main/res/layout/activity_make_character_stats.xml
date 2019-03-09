@@ -7,24 +7,189 @@
     android:background="?attr/colorAccent"
     tools:context=".MakeCharacterStats">
 
+    <Button
+        android:id="@+id/buttonToMakeEquipment"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/actionModeCloseDrawable"
+        android:scaleX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <Button
+        android:id="@+id/buttonToMakeLevel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDexMinus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="-"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewDexScore"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDexPlus" />
+
+    <Button
+        android:id="@+id/buttonIntMinus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="-"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewIntScore"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIntPlus" />
+
+    <Button
+        android:id="@+id/buttonChaMinus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="-"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewIntScore"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChaPlus" />
+
+    <TextView
+        android:id="@+id/textViewDex"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="120dp"
+        android:text="Dexterity"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStatsTitle" />
+
+    <TextView
+        android:id="@+id/textViewInt"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="120dp"
+        android:text="Intelligence"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDexScore" />
+
+    <TextView
+        android:id="@+id/textViewCha"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="120dp"
+        android:text="Charisma"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIntScore" />
+
+    <EditText
+        android:id="@+id/textViewDexScore"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="120dp"
+        android:background="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:inputType="number"
+        android:text="10"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDex" />
+
+    <EditText
+        android:id="@+id/textViewIntScore"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="120dp"
+        android:background="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:inputType="number"
+        android:text="10"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInt" />
+
+    <EditText
+        android:id="@+id/textViewChaScore"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="120dp"
+        android:background="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:inputType="number"
+        android:text="10"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCha" />
+
+    <Button
+        android:id="@+id/buttonDexPlus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="+"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewDexScore"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDex" />
+
+    <Button
+        android:id="@+id/buttonIntPlus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="+"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewIntScore"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInt" />
+
+    <Button
+        android:id="@+id/buttonChaPlus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="+"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewChaScore"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCha" />
+
     <TextView
         android:id="@+id/textViewStatsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="176dp"
-        android:gravity="center"
-        android:text="What is your character's stats?"
-        android:textSize="30sp"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="120dp"
+        android:text="What are your character's stats?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/textViewStrScore"
         android:layout_width="100dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="52dp"
+        android:layout_marginLeft="120dp"
         android:background="@color/colorPrimaryDark"
         android:ems="10"
         android:gravity="center|center_horizontal"
@@ -34,11 +199,39 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewStr" />
 
+    <EditText
+        android:id="@+id/textViewConScore"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="120dp"
+        android:background="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:inputType="number"
+        android:text="10"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCon" />
+
+    <EditText
+        android:id="@+id/textViewWisScore"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="120dp"
+        android:background="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:inputType="number"
+        android:text="10"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWis" />
+
     <TextView
         android:id="@+id/textViewStr"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
+        android:layout_marginLeft="120dp"
         android:layout_marginTop="36dp"
         android:text="Strength"
         android:textColor="@color/colorPrimaryDark"
@@ -46,17 +239,62 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewStatsTitle" />
 
+    <TextView
+        android:id="@+id/textViewCon"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="80dp"
+        android:text="Constitution"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStrScore" />
+
+    <TextView
+        android:id="@+id/textViewWis"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="80dp"
+        android:text="Wisdom"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewConScore" />
+
     <Button
         android:id="@+id/buttonStrPlus"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="68dp"
         android:background="@color/colorPrimary"
         android:text="+"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
-        app:layout_constraintLeft_toRightOf="@+id/textViewStr"
-        app:layout_constraintTop_toBottomOf="@+id/textViewStatsTitle" />
+        app:layout_constraintLeft_toRightOf="@+id/textViewStrScore"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStr" />
+
+    <Button
+        android:id="@+id/buttonConPlus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="+"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewConScore"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCon" />
+
+    <Button
+        android:id="@+id/buttonWisPlus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="+"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewWisScore"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWis" />
 
     <Button
         android:id="@+id/buttonStrMinus"
@@ -66,6 +304,28 @@
         android:text="-"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
-        app:layout_constraintLeft_toRightOf="@+id/textViewStr"
+        app:layout_constraintLeft_toRightOf="@+id/textViewStrScore"
         app:layout_constraintTop_toBottomOf="@+id/buttonStrPlus" />
+
+    <Button
+        android:id="@+id/buttonConMinus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="-"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewConScore"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConPlus" />
+
+    <Button
+        android:id="@+id/buttonWisMinus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary"
+        android:text="-"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewWisScore"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWisPlus" />
 </android.support.constraint.ConstraintLayout>

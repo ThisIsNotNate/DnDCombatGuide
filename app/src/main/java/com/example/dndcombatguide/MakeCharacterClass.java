@@ -11,7 +11,9 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class MakeCharacterClass extends AppCompatActivity {
-    String name = null, playerClass;
+    String name = null, playerClass, level;
+    String[] stats = new String[6];
+
     RadioGroup rg;
     TextView title;
     @Override
@@ -35,7 +37,7 @@ public class MakeCharacterClass extends AppCompatActivity {
         rg = findViewById(R.id.RadioButtonsClass);
 
         Button toMakeName = findViewById(R.id.buttonToMakeName);
-        Button toMakeStats = findViewById(R.id.buttonToMakeStats);
+        Button toMakeLevel = findViewById(R.id.buttonToMakeLevel);
 
         toMakeName.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,15 +51,17 @@ public class MakeCharacterClass extends AppCompatActivity {
                     RadioButton btn = (RadioButton) rg.getChildAt(radioId);
                     String playerClass = (String) btn.getText();
                     intent.putExtra("class", playerClass);
+                    intent.putExtra("level", level);
+                    intent.putExtra("stats", stats);
                 }
                 startActivity(intent);
             }
         });
 
-        toMakeStats.setOnClickListener(new View.OnClickListener() {
+        toMakeLevel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MakeCharacterClass.this, MakeCharacterStats.class); // Change to MakeCharacterStats when created
+                Intent intent = new Intent(MakeCharacterClass.this, MakeCharacterLevel.class); // Change to MakeCharacterStats when created
 
                 if(rg.getCheckedRadioButtonId()!=-1){ // if a choice is made go to next activity
                     intent.putExtra("name", name);
@@ -67,6 +71,9 @@ public class MakeCharacterClass extends AppCompatActivity {
                     RadioButton btn = (RadioButton) rg.getChildAt(radioId);
                     String playerClass = (String) btn.getText();
                     intent.putExtra("class", playerClass);
+                    intent.putExtra("level", level);
+                    intent.putExtra("stats", stats);
+
                     startActivity(intent);
                 }
 
@@ -84,6 +91,8 @@ public class MakeCharacterClass extends AppCompatActivity {
         if(extras != null){
             name = extras.getString("name");
             playerClass = extras.getString("class");
+            level = extras.getString("level");
+            stats = extras.getStringArray("stats");
             if (playerClass != null) {
                 switch (playerClass) {
                     case "Bard":
