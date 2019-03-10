@@ -10,7 +10,6 @@ import android.widget.TextView;
 public class MakeCharacterLevel extends AppCompatActivity {
     String name = null, playerClass, level;
     String[] stats = new String[6];
-
     TextView playerLevel,title;
 
     @Override
@@ -103,7 +102,7 @@ public class MakeCharacterLevel extends AppCompatActivity {
             else
                 playerLevel.setText("1");
             if(name != null && name != ""){
-                String text = "What is " + name + "'s class?";
+                String text = "What level is " + name + "?";
                 title.setText(text);
             }
         }

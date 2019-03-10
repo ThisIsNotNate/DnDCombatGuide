@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -29,5 +31,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, AboutUs.class));
             }
         });
+        try {
+            EquipmentParser ep = new EquipmentParser(this);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
