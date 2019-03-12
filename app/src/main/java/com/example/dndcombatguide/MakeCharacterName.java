@@ -13,6 +13,8 @@ public class MakeCharacterName extends AppCompatActivity {
     TextView nameForm;
     String name, playerClass = null, level = "1";
     String[] stats = {"10", "10", "10", "10", "10", "10"};
+    int[] playerSkills = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    String[] equipment = new String[4];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class MakeCharacterName extends AppCompatActivity {
                     intent.putExtra("class", playerClass);
                     intent.putExtra("level", level);
                     intent.putExtra("stats", stats);
+                    intent.putExtra("skills", playerSkills);
+                    intent.putExtra("equipment", equipment);
                     startActivity(intent);
                 }
             }
@@ -65,6 +69,8 @@ public class MakeCharacterName extends AppCompatActivity {
             playerClass = extras.getString("class");
             level = extras.getString("level");
             stats = extras.getStringArray("stats");
+            playerSkills = extras.getIntArray("skills");
+            equipment = extras.getStringArray("equipment");
         }
     }
 }

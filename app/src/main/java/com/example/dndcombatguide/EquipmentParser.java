@@ -5,18 +5,14 @@ import android.util.Log;
 
 import org.json.*;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class EquipmentParser {
 
 
-    private ArrayList<Armor> armorList = new ArrayList<Armor>();
-    private ArrayList<Weapon> weaponList = new ArrayList<Weapon>();
+    private ArrayList<Armor> armorList = new ArrayList<>();
+    private ArrayList<Weapon> weaponList = new ArrayList<>();
 
 
     public EquipmentParser(Context context){
@@ -29,6 +25,33 @@ public class EquipmentParser {
             JSONObject weapons = obj.getJSONObject("Equipment").getJSONObject("Weapons").getJSONObject("Weapons List");
             parseWeapons(weapons);
         }catch(Exception e){}
+    }
+
+    public String[] getArmorNames(){
+        String armorNames[] = new String[armorList.size()+1];
+        for(int i = 0; i < armorNames.length-1; i++){
+            armorNames[i] = armorList.get(i).getName() + armorList.get(i).getType();
+        }
+        armorNames[armorList.size()] = "Unarmored";
+        return armorNames;
+    }
+
+    public String[] getWeaponNames(){
+        String weaponNames[] = new String[weaponList.size()+1];
+        weaponNames[0] = "------";
+        for(int i = 1; i < weaponNames.length; i++){
+            weaponNames[i] = weaponList.get(i-1).getName();
+        }
+
+        return weaponNames;
+    }
+
+    public ArrayList<Weapon> getWeaponList(){
+        return weaponList;
+    }
+
+    public ArrayList<Armor> getArmorList(){
+        return armorList;
     }
 
     public void parseWeapons(JSONObject weapons){

@@ -13,6 +13,8 @@ public class MakeCharacterStats extends AppCompatActivity {
 
     String[] stats = new String[6];
     String name = null, playerClass, level;
+    int[] playerSkills = new int[18];
+    String[] equipment= new String[4];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,7 @@ public class MakeCharacterStats extends AppCompatActivity {
         }
 
         Button toLevel = findViewById(R.id.buttonToMakeLevel);
-        Button toEquipment = findViewById(R.id.buttonToMakeEquipment);
+        Button toSkills = findViewById(R.id.buttonToMakeSkills);
 
         Button strP = findViewById(R.id.buttonStrPlus);
         Button strM = findViewById(R.id.buttonStrMinus);
@@ -72,21 +74,23 @@ public class MakeCharacterStats extends AppCompatActivity {
                 intent.putExtra("class", playerClass);
                 intent.putExtra("level", level);
                 intent.putExtra("stats", stats);
-
+                intent.putExtra("skills", playerSkills);
+                intent.putExtra("equipment", equipment);
                 startActivity(intent);
             }
         });
 
-        toEquipment.setOnClickListener(new View.OnClickListener() {
+        toSkills.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MakeCharacterStats.this, MakeCharacterEquipment.class);
+                Intent intent = new Intent(MakeCharacterStats.this, MakeCharacterSkills.class);
                 getStats();
                 intent.putExtra("name", name);
                 intent.putExtra("class", playerClass);
                 intent.putExtra("level", level);
                 intent.putExtra("stats", stats);
-
+                intent.putExtra("skills", playerSkills);
+                intent.putExtra("equipment", equipment);
                 startActivity(intent);
             }
         });
@@ -255,6 +259,8 @@ public class MakeCharacterStats extends AppCompatActivity {
             playerClass = extras.getString("class");
             level = extras.getString("level");
             stats = extras.getStringArray("stats");
+            playerSkills = extras.getIntArray("skills");
+            equipment = extras.getStringArray("equipment");
             if(stats != null){
                 strScore.setText(stats[0]);
                 dexScore.setText(stats[1]);
@@ -275,12 +281,4 @@ public class MakeCharacterStats extends AppCompatActivity {
         stats[5] = chaScore.getText().toString();
     }
 
-//    public void initStats(){
-//        strScore.setText("10");
-//        dexScore.setText("10");
-//        conScore.setText("10");
-//        intScore.setText("10");
-//        wisScore.setText("10");
-//        chaScore.setText("10");
-//    }
 }

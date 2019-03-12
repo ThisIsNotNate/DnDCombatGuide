@@ -4,6 +4,133 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".MakeCharacterEquipment">
 
+    <Button
+        android:id="@+id/buttonToMakeNext"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/actionModeCloseDrawable"
+        android:scaleX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <Button
+        android:id="@+id/buttonToMakeSkills"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEquipmentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="176dp"
+        android:text="What armor and weapons does your character have?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerArmor"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEquipmentTitle" />
+
+    <Spinner
+        android:id="@+id/spinnerWeapon1"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerArmor" />
+
+    <Spinner
+        android:id="@+id/spinnerWeapon2"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerWeapon1" />
+
+    <Spinner
+        android:id="@+id/spinnerWeapon3"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerWeapon2" />
+
+    <TextView
+        android:id="@+id/textViewArmor"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Armor"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintRight_toLeftOf="@+id/spinnerArmor"
+        app:layout_constraintRight_toRightOf="@+id/spinnerArmor"
+        app:layout_constraintTop_toTopOf="@+id/spinnerArmor" />
+
+    <TextView
+        android:id="@+id/textViewArmor2"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Weapon 1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintRight_toLeftOf="@+id/spinnerWeapon1"
+        app:layout_constraintTop_toTopOf="@+id/spinnerWeapon1" />
+
+    <TextView
+        android:id="@+id/textViewWeapon2"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Weapon 2"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintRight_toLeftOf="@+id/spinnerWeapon2"
+        app:layout_constraintTop_toTopOf="@+id/spinnerWeapon2" />
+
+    <TextView
+        android:id="@+id/textViewWeapon"
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="Weapon 3"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        app:layout_constraintRight_toLeftOf="@+id/spinnerWeapon3"
+        app:layout_constraintTop_toTopOf="@+id/spinnerWeapon3" />
 </android.support.constraint.ConstraintLayout>

@@ -39,6 +39,15 @@ public class Armor {
     public String getName() {
         return name;
     }
+
+    public String getType(){
+        switch(type){
+            case LIGHT: return " (Light Armor)";
+            case MEDIUM: return  " (Medium Armor)";
+            case HEAVY: return  " (Heavy Armor)";
+        }
+        return "";
+    }
 }
 
 

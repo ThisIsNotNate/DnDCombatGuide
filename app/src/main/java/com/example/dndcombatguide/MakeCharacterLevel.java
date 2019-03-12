@@ -10,6 +10,8 @@ import android.widget.TextView;
 public class MakeCharacterLevel extends AppCompatActivity {
     String name = null, playerClass, level;
     String[] stats = new String[6];
+    String[] equipment= new String[4];
+    int[] playerSkills = new int[18];
     TextView playerLevel,title;
 
     @Override
@@ -44,6 +46,8 @@ public class MakeCharacterLevel extends AppCompatActivity {
                 intent.putExtra("class", playerClass);
                 intent.putExtra("stats", stats);
                 intent.putExtra("level", playerLevel.getText().toString());
+                intent.putExtra("skills", playerSkills);
+                intent.putExtra("equipment", equipment);
                 startActivity(intent);
             }
         });
@@ -56,6 +60,8 @@ public class MakeCharacterLevel extends AppCompatActivity {
                 intent.putExtra("class", playerClass);
                 intent.putExtra("stats", stats);
                 intent.putExtra("level", playerLevel.getText().toString());
+                intent.putExtra("skills", playerSkills);
+                intent.putExtra("equipment", equipment);
                 startActivity(intent);
             }
         });
@@ -96,6 +102,8 @@ public class MakeCharacterLevel extends AppCompatActivity {
             playerClass = extras.getString("class");
             stats = extras.getStringArray("stats");
             level = extras.getString("level");
+            playerSkills = extras.getIntArray("skills");
+            equipment = extras.getStringArray("equipment");
             if(level != null && !level.equals("")){
                 playerLevel.setText(level);
             }

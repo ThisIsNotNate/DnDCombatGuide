@@ -31,10 +31,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, AboutUs.class));
             }
         });
-        try {
-            EquipmentParser ep = new EquipmentParser(this);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
+//        try{
+//            EquipmentParser ep = new EquipmentParser(this);
+//        }catch(Exception e){}
     }
 }

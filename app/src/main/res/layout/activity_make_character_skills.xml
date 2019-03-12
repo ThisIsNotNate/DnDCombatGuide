@@ -7,6 +7,29 @@
     android:background="@color/colorAccent"
     tools:context=".MakeCharacterSkills">
 
+    <Button
+        android:id="@+id/buttonToMakeStats"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.842" />
+
+    <Button
+        android:id="@+id/buttonToMakeEquipment"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:foreground="?attr/actionModeCloseDrawable"
+        android:scaleX="-1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.842" />
+
     <TextView
         android:id="@+id/textViewSkillsTitle"
         android:layout_width="wrap_content"
@@ -24,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Skill Proficiencies and Expertise"
+        android:text="Skill Proficiencies"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -34,7 +57,7 @@
     <TableLayout
         android:layout_width="585dp"
         android:layout_height="751dp"
-        android:layout_marginTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSkillsSubtitle">
@@ -42,36 +65,251 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/textView4"
+            <CheckBox
+                android:id="@+id/checkBoxAth"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Athletics"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAcr"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Acrobatics"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxSoh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Sleight of Hand"
+                android:textColor="@color/colorPrimary"
+                android:textScaleX=".8"
+                android:textSize="18sp" />
 
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:addStatesFromChildren="false" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxSte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Stealth"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxArc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Arcana"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxHis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="History"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxInv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Investigation"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxNat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Nature"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxRel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Religion"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxAni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Animal Handling"
+                android:textColor="@color/colorPrimary"
+                android:textScaleX=".9"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxIns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Insight"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Medicine"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxPer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Perception"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxSur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Survival"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Deception"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxInt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Intimidation"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPerf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Performance"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="10dp"
+                android:text="Persuasion"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+        </TableRow>
+
     </TableLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -13,6 +13,8 @@ import android.widget.TextView;
 public class MakeCharacterClass extends AppCompatActivity {
     String name = null, playerClass, level;
     String[] stats = new String[6];
+    int[] playerSkills = new int[18];
+    String[] equipment= new String[4];
 
     RadioGroup rg;
     TextView title;
@@ -53,6 +55,8 @@ public class MakeCharacterClass extends AppCompatActivity {
                     intent.putExtra("class", playerClass);
                     intent.putExtra("level", level);
                     intent.putExtra("stats", stats);
+                    intent.putExtra("skills", playerSkills);
+                    intent.putExtra("equipment", equipment);
                 }
                 startActivity(intent);
             }
@@ -73,6 +77,8 @@ public class MakeCharacterClass extends AppCompatActivity {
                     intent.putExtra("class", playerClass);
                     intent.putExtra("level", level);
                     intent.putExtra("stats", stats);
+                    intent.putExtra("skills", playerSkills);
+                    intent.putExtra("equipment", equipment);
 
                     startActivity(intent);
                 }
@@ -93,6 +99,8 @@ public class MakeCharacterClass extends AppCompatActivity {
             playerClass = extras.getString("class");
             level = extras.getString("level");
             stats = extras.getStringArray("stats");
+            playerSkills = extras.getIntArray("skills");
+            equipment = extras.getStringArray("equipment");
             if (playerClass != null) {
                 switch (playerClass) {
                     case "Bard":
