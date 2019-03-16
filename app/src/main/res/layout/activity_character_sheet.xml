@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".CharacterSheet">
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textViewAni"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEquip">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewWep1"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Weapon1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewWep2"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Weapon 2"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewWep3"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Weapon3"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewPers"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPerf" />
+
+    <TextView
+        android:id="@+id/textViewPerf"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIntel" />
+
+    <TextView
+        android:id="@+id/textViewIntel"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDec" />
+
+    <TextView
+        android:id="@+id/textViewDec"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSur" />
+
+    <TextView
+        android:id="@+id/textViewSur"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPer" />
+
+    <TextView
+        android:id="@+id/textViewPer"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMed" />
+
+    <TextView
+        android:id="@+id/textViewMed"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewIns" />
+
+    <TextView
+        android:id="@+id/textViewIns"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAni" />
+
+    <TextView
+        android:id="@+id/textViewAni"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRel" />
+
+    <TextView
+        android:id="@+id/textViewRel"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNat" />
+
+    <TextView
+        android:id="@+id/textViewNat"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInv" />
+
+    <TextView
+        android:id="@+id/textViewInv"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHis" />
+
+    <TextView
+        android:id="@+id/textViewHis"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewArc" />
+
+    <TextView
+        android:id="@+id/textViewArc"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSte" />
+
+    <TextView
+        android:id="@+id/textViewSte"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSoh" />
+
+    <TextView
+        android:id="@+id/textViewSoh"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAcr" />
+
+    <TextView
+        android:id="@+id/textViewAth"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Table2" />
+
+    <TextView
+        android:id="@+id/textViewAcr"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Initiative"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAth" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp"
+        android:text="Name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/Layout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:gravity="clip_horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="clip_horizontal|center"
+                android:padding="10dp"
+                android:text="Str"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Dex"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Con"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Int"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Wis"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Cha"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewDex"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Dex"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textViewStr"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="clip_horizontal|center"
+                android:padding="10dp"
+                android:text="Str"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textViewCon"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Con"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textViewIntel"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Int"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textViewWis"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Wis"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textViewCha"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Cha"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/Table2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Layout1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewInit"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Initiative"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textViewAC"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="AC:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <TextView
+                android:id="@+id/textViewProf"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Prof. Bonus: "
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="199dp"
+                tools:layout_editor_absoluteY="80dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textViewEquip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="5dp"
+        android:text="Equipment"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@+id/textViewAcr"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Table2" />
+
+</android.support.constraint.ConstraintLayout>

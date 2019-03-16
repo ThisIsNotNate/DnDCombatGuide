@@ -24,12 +24,13 @@ public class MakeCharacterEquipment extends AppCompatActivity {
     Spinner armors, wep1, wep2, wep3;
     ArrayAdapter<String> weaponAdapter;
     ArrayAdapter<String> armorAdapter;
+    EquipmentParser ep;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_character_equipment);
-        EquipmentParser ep = new EquipmentParser(this);
+        ep = new EquipmentParser(this);
         title = findViewById(R.id.textViewEquipmentTitle);
         Bundle extras = getIntent().getExtras();
         name = null;
@@ -84,10 +85,8 @@ public class MakeCharacterEquipment extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(); // change when classes made
-                if(isSpellcaster())
-                    ;//intent = new Intent(MakeCharacterEquipment.this, MakeCharacterSpells.class);
-                else
-                    ;//intent = new Intent(MakeCharacterEquipment.this, CharacterSheet.class);
+
+                intent = new Intent(MakeCharacterEquipment.this, CharacterSheet.class);
                 getEquipment();
                 if(name != null && !name.equals("")) {
                     intent.putExtra("name", name);
@@ -110,19 +109,52 @@ public class MakeCharacterEquipment extends AppCompatActivity {
     }
 
     public void getEquipment(){
-        equipment[0] = armors.getSelectedItem().toString();
+        String armor = armors.getSelectedItem().toString();
+        equipment[0] = Integer.toString(ep.getAC(armor) + toModifier(stats[1]));
         if(wep1.getSelectedItem().toString().equals("------"))
             equipment[1] = "";
-        else
-            equipment[1] = wep1.getSelectedItem().toString();
+        else {
+            String weapon = wep1.getSelectedItem().toString();
+            equipment[1] = weapon;
+        }
         if(wep2.getSelectedItem().toString().equals("------"))
             equipment[2] = "";
-        else
-            equipment[2] = wep2.getSelectedItem().toString();
+        else {
+            String weapon = wep2.getSelectedItem().toString();
+            equipment[2] = weapon;
+        }
         if(wep3.getSelectedItem().toString().equals("------"))
             equipment[3] = "";
-        else
-            equipment[3] = wep3.getSelectedItem().toString();
+        else{
+            String weapon = wep1.getSelectedItem().toString();
+            equipment[3] = weapon;
+        }
+    }
+
+    public int toModifier(String stat){
+        switch(stat){
+            case "1": return -5;
+            case "2":
+            case "3": return -4;
+            case "4":
+            case "5": return -3;
+            case "6":
+            case "7": return -2;
+            case "8":
+            case "9": return -1;
+            case "10":
+            case "11": return 0;
+            case "12":
+            case "13": return 1;
+            case "14":
+            case "15": return 2;
+            case "16":
+            case "17": return 3;
+            case "18":
+            case "19": return 4;
+            case "20": return 5;
+        }
+        return 0;
     }
 
     @Override

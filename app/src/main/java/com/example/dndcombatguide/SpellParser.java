@@ -10,6 +10,7 @@ import org.json.*;
 
 public class SpellParser {
     private ArrayList<Spell> spellList = new ArrayList<Spell>();
+    JSONObject classSpells;
     public void main(String args[]){
         try {
             String filename = "spellcasting.json";
@@ -18,7 +19,7 @@ public class SpellParser {
             String jsonClasses = readJSON(filename2);
 
             JSONObject spellcasting = new JSONObject(jsonSpellcasting);
-            JSONObject spells = spellcasting.getJSONObject("Spellcasting").getJSONObject("Spell Descriptions");
+            classSpells = spellcasting.getJSONObject("Spellcasting").getJSONObject("Spell Descriptions");
 
             JSONObject classes = new JSONObject(jsonClasses);
             DndClass bard = parseClass(classes, "Bard");

@@ -2,33 +2,30 @@ package com.example.dndcombatguide;
 
 public class PlayerCharacter {
     String name;
-    private int level;
-    private int str;
-    private int dex;
-    private int con;
-    private int intel;
-    private int wis;
-    private int cha;
-    private int prof_bonus;
-    private int ac;
-    private int initiative;
-    private int speed;
-    private int maxHP;
-    private int currentHP;
+    private String level;
+    private String str;
+    private String dex;
+    private String con;
+    private String intel;
+    private String wis;
+    private String cha;
+    private String prof_bonus;
+    private String ac;
+    private String initiative;
+    private String speed;
+
     //Class class;
     //Race race;
     public PlayerCharacter(){
-        level = 1;
-        str = dex = con = intel = wis = cha = 10;
-        prof_bonus = 2;
-        ac = 10;
-        initiative = 0;
-        speed = 30;
-        maxHP = 10;
-        currentHP = 10;
+        level = "1";
+        str = dex = con = intel = wis = cha = "10";
+        prof_bonus = "2";
+        ac = "10";
+        initiative = "10";
+        speed = "30";
     }
 
-    public void setLevel(int level){
+    public void setLevel(String level){
         this.level = level;
     }
 
@@ -36,31 +33,31 @@ public class PlayerCharacter {
         this.name = name;
     }
 
-    public void setStr(int str) {
+    public void setStr(String str) {
         this.str = str;
     }
 
-    public void setDex(int dex) {
+    public void setDex(String dex) {
         this.dex = dex;
     }
 
-    public void setCon(int con) {
+    public void setCon(String con) {
         this.con = con;
     }
 
-    public void setIntel(int intel) {
+    public void setIntel(String intel) {
         this.intel = intel;
     }
 
-    public void setWis(int wis) {
+    public void setWis(String wis) {
         this.wis = wis;
     }
 
-    public void setCha(int cha) {
+    public void setCha(String cha) {
         this.cha = cha;
     }
 
-    public void setAc(int ac) {
+    public void setAc(String ac) {
         this.ac = ac;
     }
 
@@ -68,47 +65,47 @@ public class PlayerCharacter {
         return name;
     }
 
-    public int getLevel() {
+    public String getLevel() {
         return level;
     }
 
-    public int getStr() {
+    public String getStr() {
         return str;
     }
 
-    public int getDex() {
+    public String getDex() {
         return dex;
     }
 
-    public int getCon() {
+    public String getCon() {
         return con;
     }
 
-    public int getIntel() {
+    public String getIntel() {
         return intel;
     }
 
-    public int getWis() {
+    public String getWis() {
         return wis;
     }
 
-    public int getCha() {
+    public String getCha() {
         return cha;
     }
 
-    public int getProf_bonus() {
+    public String getProf_bonus() {
         return prof_bonus;
     }
 
-    public int getAc() {
+    public String getAc() {
         return ac;
     }
 
-    public int getInitiative() {
+    public String getInitiative() {
         return initiative;
     }
 
-    public int getSpeed() {
+    public String getSpeed() {
         return speed;
     }
 }

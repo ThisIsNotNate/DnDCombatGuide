@@ -95,6 +95,23 @@ public class EquipmentParser {
         }
     }
 
+    public int getAC(String name){
+        for(Armor a: armorList){
+            if(a.getName().equals(name)){
+                if(a.getType().equals(" (Light Armor)")){
+                    return 12;
+                }
+                else if(a.getType().equals(" (Medium Armor)")){
+                    return 14;
+                }
+                else{
+                    return 16;
+                }
+            }
+        }
+        return 10;
+    }
+
     public void parseArmorTable(JSONObject table, Armor.ArmorType type){
         ArrayList<String> names = new ArrayList<String>();
         ArrayList<String> acs = new ArrayList<String>();
