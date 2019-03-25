@@ -103,10 +103,10 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewIntel" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewInti" />
 
     <TextView
-        android:id="@+id/textViewIntel"
+        android:id="@+id/textViewInti"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"

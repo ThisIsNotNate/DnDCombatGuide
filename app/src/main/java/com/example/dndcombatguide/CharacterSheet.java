@@ -91,7 +91,7 @@ public class CharacterSheet extends AppCompatActivity {
 
             TextView dec = findViewById(R.id.textViewDec);
             setSkill(dec, 5, 14, "Deception");
-            TextView inti = findViewById(R.id.textViewIntel);
+            TextView inti = findViewById(R.id.textViewInti);
             setSkill(inti, 5, 15, "Initimidation");
             TextView perf = findViewById(R.id.textViewPerf);
             setSkill(perf, 5, 16, "Performance");

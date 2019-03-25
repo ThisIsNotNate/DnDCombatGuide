@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewStatsTitle" />
 
     <TextView
-        android:id="@+id/textViewIntel"
+        android:id="@+id/textViewInti"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
@@ -124,7 +124,7 @@
         android:text="10"
         android:textSize="30sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewIntel" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewInti" />
 
     <EditText
         android:id="@+id/textViewChaScore"
@@ -160,7 +160,7 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         app:layout_constraintLeft_toRightOf="@+id/textViewIntScore"
-        app:layout_constraintTop_toBottomOf="@+id/textViewIntel" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewInti" />
 
     <Button
         android:id="@+id/buttonChaPlus"
